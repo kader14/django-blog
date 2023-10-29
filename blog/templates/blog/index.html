@@ -1,11 +1,47 @@
 {% extends "blog/base.html" %}
+{% load static%}
 
 {% block title %}
 مدونتي الشخصية
 {% endblock  %}
 
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock%}
+
 {% block content %}
-<h1>
-    مرحبا لالعالم
-</h1>\\
+<header id="main-navigation">
+    <h1><a href=""> مدونتي الشخصية</a></h1>
+    <nav>
+        <a href=""> جميع المقالات</a>
+    </nav>
+</header>
+<section id ="welcome">
+    <header>
+        <img src="{% static 'blog/NKsTMVLT_400x400.png'%}" alt="عبد القادر صاحب المدونة">
+        <br>
+        <h2>مدونة عبد القادر</h2>  
+    </header>
+    <p>مرحبا أنا عبد القادر و أحب التدوين حول بايثون و جانغو</p>
+</section>
+<section id="latest-posts">
+    <h2>أخر التدوينات</h2>
+    <ul>
+        <li>
+            <article class="post">
+                <a href="">
+                    <img src="{% static 'blog/mountains.jpg'%}" alt="تسلق الجبال">
+                    <div class="post__content">
+                        <h3>تسلق الجبال</h3>
+                        <P>لا يوجد أفضل من منظر عند تسلق الجبال  خاصة في فصل الشتاء ومع رفقة جميلة مصل أمك</P>
+                    </div>
+                </a>
+            </article>
+        </li>
+    </ul>
+</section>
+<section id="about">
+    <h2>من انا</h2>
+    <p>احب البرمجة واحب مساعدة الناس</p>
+</section>
 {% endblock  %}
