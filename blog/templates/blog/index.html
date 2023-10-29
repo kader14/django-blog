@@ -6,16 +6,12 @@
 {% endblock  %}
 
 {% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/post.css' %}">
 <link rel="stylesheet" href="{% static 'blog/index.css' %}">
 {% endblock%}
 
 {% block content %}
-<header id="main-navigation">
-    <h1><a href=""> مدونتي الشخصية</a></h1>
-    <nav>
-        <a href=""> جميع المقالات</a>
-    </nav>
-</header>
+
 <section id ="welcome">
     <header>
         <img src="{% static 'blog/NKsTMVLT_400x400.png'%}" alt="عبد القادر صاحب المدونة">
@@ -27,18 +23,7 @@
 <section id="latest-posts">
     <h2>أخر التدوينات</h2>
     <ul>
-        <li>
-            <article class="post">
-                <a href="">
-                    <img src="{% static 'blog/mountains.jpg'%}" alt="تسلق الجبال">
-                    <div class="post__content">
-                        <h3>تسلق الجبال</h3>
-                        <P>لا يوجد أفضل من منظر عند تسلق الجبال  خاصة في فصل الشتاء ومع رفقة جميلة مصل أمك</P>
-                    </div>
-                </a>
-            </article>
-        </li>
-    </ul>
+        {% include "blog/includes/posts.html"%}
 </section>
 <section id="about">
     <h2>من انا</h2>
