@@ -1,0 +1,37 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}
+الأرشيف
+{% endblock  %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+
+{% endblock%}
+
+{% block content %}
+<section id="summary">
+    <h2>عنوان المدونة</h2>
+    <article>
+        <img src="{% static "blog/mountains.jpg" %}" alt=" عنوان التدوينة">
+        <address>بواسطة عبد القادر</address>
+        <div>
+        تم الحديث <time> اكتوبر</time>
+        </div>
+    </article>
+    </section>
+    
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore soluta praesentium vitae rem illo modi ut sed quisquam iste aperiam ex repellat perferendis tenetur, porro voluptates reprehenderit. Ea, ab!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore soluta praesentium vitae rem illo modi ut sed quisquam iste aperiam ex repellat perferendis tenetur, porro voluptates reprehenderit. Ea, ab!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore soluta praesentium vitae rem illo modi ut sed quisquam iste aperiam ex repellat perferendis tenetur, porro voluptates reprehenderit. Ea, ab!
+        </p>
+    </main>
+
+{% endblock %}
